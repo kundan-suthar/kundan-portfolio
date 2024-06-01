@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background: #0aff9d; /* Background color of the selected text */
+  color: #000000; /* Text color of the selected text */
+}
+
+/* For Firefox, which uses a different pseudo-element */
+::-moz-selection {
+  background: #0aff9d; /* Background color of the selected text */
+  color: #000000; /* Text color of the selected text */
+}
