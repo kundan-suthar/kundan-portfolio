@@ -2,6 +2,7 @@ import React from "react";
 import ListItem from "./ListItem";
 import { useGlobalContext } from "../app/GlobalContext";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const Leftnav = () => {
   const { aboutRef, contactIsInView, projectsIsInView, expIsInView } =
@@ -31,9 +32,18 @@ const Leftnav = () => {
     >
       <div className="flex items-center justify-center h-2"></div>{" "}
       {/* Top Spacer */}
-      <span className="relative text-text font-poppins font-black bg-background w-11 h-11 flex items-center justify-center text-md leading-none rounded-sm mb-5">
-        K<span className="text-brand">.</span>
-      </span>
+      <Link
+        to="hero"
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-70} // Adjust offset as needed
+        className="text-decoration-none cursor-pointer"
+      >
+        <span className="relative text-text font-poppins font-black bg-background w-11 h-11 flex items-center justify-center text-md leading-none rounded-sm mb-5">
+          K<span className="text-brand">.</span>
+        </span>
+      </Link>
       <motion.ul className="flex flex-col z-20 ">
         <motion.div variants={itemVariants}>
           <ListItem

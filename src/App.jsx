@@ -25,7 +25,6 @@ function App() {
         <div className="h-96 w-full bg-background"></div>
         <Contact />
       </div>
-      <div className="h-2"></div>
     </main>
   );
 }

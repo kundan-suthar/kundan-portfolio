@@ -42,10 +42,7 @@ const Header = () => {
           </a>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <a
-            href="https://www.linkedin.com/in/kundan-suthar-91a8717a/"
-            target="_blank"
-          >
+          <a href="https://github.com/kk240" target="_blank">
             <FaGithub
               size={22}
               className="text-text opacity-50 font-medium hover:text-brand"
@@ -53,10 +50,7 @@ const Header = () => {
           </a>
         </motion.li>
         <motion.li variants={itemVariants}>
-          <a
-            href="https://www.linkedin.com/in/kundan-suthar-91a8717a/"
-            target="_blank"
-          >
+          <a href="https://x.com/kundanss22" target="_blank">
             <AiFillTwitterCircle
               size={25}
               className="text-text opacity-50 font-medium hover:text-brand"
