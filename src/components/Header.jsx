@@ -5,6 +5,25 @@ import { FaGithub } from "react-icons/fa6";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Header = () => {
+  const handleDownload = () => {
+    // The resume file path
+    const resumePath = "/resume.pdf";
+
+    // Create a link element
+    const link = document.createElement("a");
+    link.href = resumePath;
+    link.download = "Kundan_Resume.pdf";
+
+    // Append link to the body
+    document.body.appendChild(link);
+
+    // Programmatically click the link to trigger the download
+    link.click();
+
+    // Remove the link from the document
+    document.body.removeChild(link);
+  };
+
   // Define animation variants for the container and list items
   const containerVariants = {
     hidden: { opacity: 0, y: -100 },
@@ -59,6 +78,7 @@ const Header = () => {
         </motion.li>
       </motion.ul>
       <motion.button
+        onClick={handleDownload}
         className="h-11 px-4 cursor-pointer  border border-solid border-brand text-brand text-[18px] rounded-md"
         whileHover={{
           backgroundColor: "#0aff9d",
