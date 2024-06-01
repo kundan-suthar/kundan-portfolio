@@ -4,6 +4,10 @@ import { useGlobalContext } from "../app/GlobalContext";
 import { Reveal } from "./utils/Reveal";
 
 const Contact = () => {
+  const handleContactForm = (e) => {
+    e.preventDefault();
+    alert("functionality in progress");
+  };
   const ref = useRef();
   const isInview = useInView(ref);
   const { contactIsInViewSetter } = useGlobalContext();
@@ -28,6 +32,7 @@ const Contact = () => {
           action="#"
           method="POST"
           className="mx-auto mt-16 max-w-xl sm:mt-20"
+          onSubmit={handleContactForm}
         >
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
