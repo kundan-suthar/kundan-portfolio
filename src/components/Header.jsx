@@ -3,27 +3,9 @@ import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { AiFillTwitterCircle } from "react-icons/ai";
+import Resume from "../assets/Kundan_Resume.pdf";
 
 const Header = () => {
-  const handleDownload = () => {
-    // The resume file path
-    const resumePath = "/resume.pdf";
-
-    // Create a link element
-    const link = document.createElement("a");
-    link.href = resumePath;
-    link.download = "Kundan_Resume.pdf";
-
-    // Append link to the body
-    document.body.appendChild(link);
-
-    // Programmatically click the link to trigger the download
-    link.click();
-
-    // Remove the link from the document
-    document.body.removeChild(link);
-  };
-
   // Define animation variants for the container and list items
   const containerVariants = {
     hidden: { opacity: 0, y: -100 },
@@ -77,7 +59,7 @@ const Header = () => {
           </a>
         </motion.li>
       </motion.ul>
-      <motion.button
+      {/* <motion.button
         onClick={handleDownload}
         className="h-11 px-4 cursor-pointer  border border-solid border-brand text-brand text-[18px] rounded-md"
         whileHover={{
@@ -87,7 +69,19 @@ const Header = () => {
         }}
       >
         My resume
-      </motion.button>
+      </motion.button> */}
+      <a href={Resume} download="Resume">
+        <motion.button
+          className="h-11 px-4 cursor-pointer  border border-solid border-brand text-brand text-[18px] rounded-md"
+          whileHover={{
+            backgroundColor: "#0aff9d",
+            color: "#080808",
+            transition: { duration: 0.5 },
+          }}
+        >
+          My resume
+        </motion.button>
+      </a>
     </motion.div>
   );
 };
