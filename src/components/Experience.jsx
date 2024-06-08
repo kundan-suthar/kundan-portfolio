@@ -32,8 +32,8 @@ const Experience = () => {
             return <Card project={project} />;
           })}
         </div> */}
-        {experiences.map((exp) => {
-          return <ExperinceCard exp={exp} />;
+        {experiences.map((exp, i) => {
+          return <ExperinceCard key={i} exp={exp} />;
         })}
       </div>
     </div>

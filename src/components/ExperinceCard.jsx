@@ -30,9 +30,12 @@ const ExperinceCard = ({ exp }) => {
           className="flex gap-2      
           sm:ml-0  flex-wrap  mb-4"
         >
-          {exp.skills.map((skill) => {
+          {exp.skills.map((skill, i) => {
             return (
-              <div className="bg-background-light  text-xl leading-4  rounded-full px-4 text-text py-1 flex items-center gap-2">
+              <div
+                key={i}
+                className="bg-background-light  text-xl leading-4  rounded-full px-4 text-text py-1 flex items-center gap-2"
+              >
                 {skill}
               </div>
             );

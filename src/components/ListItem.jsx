@@ -7,7 +7,7 @@ const ListItem = ({ itemName, currenIsInView, targetId }) => {
   const { aboutRef } = useGlobalContext();
   const mainControls = useAnimation();
   useEffect(() => {
-    console.log(currenIsInView);
+    //console.log(currenIsInView);
     if (currenIsInView) {
       mainControls.start("visible");
     } else {

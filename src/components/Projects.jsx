@@ -28,8 +28,8 @@ const Projects = () => {
           </Reveal>
         </div>
         <div className="sm:px-5 grid sm:gap-8 grid-cols-1 md:grid-cols-2 ">
-          {projects.map((project) => {
-            return <Card project={project} />;
+          {projects.map((project, index) => {
+            return <Card project={project} key={index} />;
           })}
         </div>
       </div>

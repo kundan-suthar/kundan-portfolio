@@ -38,8 +38,10 @@ const Card = ({ project }) => {
       </div>
       <Reveal>
         <div className="mb-4">
-          {project.projectTechs.map((tech) => (
-            <span className="text-brand text-xl mr-2">{tech}</span>
+          {project.projectTechs.map((tech, i) => (
+            <span key={i} className="text-brand text-xl mr-2">
+              {tech}
+            </span>
           ))}
         </div>
       </Reveal>

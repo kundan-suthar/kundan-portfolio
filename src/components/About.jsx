@@ -27,7 +27,7 @@ const About = () => {
 
   const isInView = useInView(ref);
   useEffect(() => {
-    console.log(isInView);
+    // console.log(isInView);
 
     if (isInView) {
       aboutRefSetter(isInView);
