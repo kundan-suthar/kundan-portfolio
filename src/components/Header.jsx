@@ -44,7 +44,7 @@ const Header = () => {
             </a>
           </motion.li>
           <motion.li variants={itemVariants}>
-            <a href="https://github.com/kk240" target="_blank">
+            <a href="https://github.com/kundan-suthar" target="_blank">
               <FaGithub
                 size={22}
                 className="text-text opacity-50 font-medium hover:text-brand"
